@@ -8,7 +8,18 @@ document.getElementById('moreButton').addEventListener('click', () => {
 	  imageContainer.classList.remove('spinning');
 	  imageContainer.style.display = 'none';
 	}, 5000); // Display and spin for 5 seconds
+  
+	// Play music when "more" is clicked
+	playMusic();
   });
+  
+  // Function to play music
+  function playMusic() {
+	const music = document.getElementById('backgroundMusic');
+	if (music.paused) {
+	  music.play();
+	}
+  }
   
   // Moves a diagonal image every 5 seconds
   function generateRandomPosition() {
