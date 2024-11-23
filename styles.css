@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.background {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-image: url('bit_pix.png'); /* Adjust this path */
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+}
+
+.overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centered-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.centered-text h1 {
+  color: red;
+  font-size: 98px;
+  margin: 0;
+}
+
+.centered-text p {
+  color: black;
+  font-size: 74px;
+  margin: 10px 0 0;
+}
+
+.centered-text .small-text {
+  font-size: 25px;
+  margin-top: 5px;
+  color: black;
+}
+
+.button {
+  position: absolute;
+  width: 100px;
+  height: 80px;
+  background-color: white;
+  color: black;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid black;
+  border-radius: 15%;
+  box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.button:hover {
+  background-color: black;
+  color: white;
+  border-color: white;
+}
+
+.left-button {
+  top: 20px;
+  left: 40px;
+}
+
+.right-button {
+  top: 20px;
+  right: 40px;
+}
+
+.image-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 200px;
+}
+
+.spinnable-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.spinning .spinnable-image {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.moving-image {
+  position: fixed;
+  width: 150px;
+  height: 150px;
+  opacity: 0.25;
+  z-index: 9999;
+  display: none; /* Hidden initially */
+}
+
+.diagonal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
