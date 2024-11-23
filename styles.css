@@ -139,3 +139,72 @@ body {
   height: 100%;
   object-fit: contain;
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .centered-text h1 {
+    font-size: 48px; /* Adjust text size for smaller screens */
+  }
+
+  .centered-text p {
+    font-size: 36px;
+  }
+
+  .centered-text .small-text {
+    font-size: 18px;
+  }
+
+  .button {
+    width: 80px;
+    height: 60px;
+    font-size: 12px; /* Smaller buttons for smaller screens */
+  }
+
+  .left-button {
+    left: 20px; /* Adjust button position */
+  }
+
+  .right-button {
+    right: 20px;
+  }
+
+  .image-container {
+    width: 150px; /* Smaller spinning image */
+    height: 150px;
+  }
+
+  .moving-image {
+    width: 100px; /* Smaller moving image */
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .centered-text h1 {
+    font-size: 36px; /* Further reduce text size */
+  }
+
+  .centered-text p {
+    font-size: 24px;
+  }
+
+  .centered-text .small-text {
+    font-size: 14px;
+  }
+
+  .button {
+    width: 70px;
+    height: 50px;
+    font-size: 10px; /* Adjust font for small screens */
+  }
+
+  .image-container {
+    width: 100px; /* Even smaller spinning image */
+    height: 100px;
+  }
+
+  .moving-image {
+    width: 80px; /* Smaller moving image */
+    height: 80px;
+  }
+}
